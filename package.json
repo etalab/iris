@@ -1,0 +1,37 @@
+{
+  "name": "@etalab/iris",
+  "version": "1.0.0",
+  "repository": "https://github.com/etalab/iris",
+  "author": "Jérôme Desboeufs <jerome.desboeufs@data.gouv.fr>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node --max-old-space-size=4096 server",
+    "build": "node build"
+  },
+  "dependencies": {
+    "@turf/turf": "^5.1.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "flatbush": "^3.3.0",
+    "lodash": "^4.17.15",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "bluebird": "^3.7.2",
+    "execa": "^4.0.2",
+    "fs-extra": "^9.0.1",
+    "gdal-next": "^1.0.3",
+    "geojson-stream": "^0.1.0",
+    "glob": "^7.1.6",
+    "pumpify": "^2.0.1",
+    "xo": "^0.32.0"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": 2,
+    "rules": {
+      "unicorn/prevent-abbreviations": "off"
+    }
+  }
+}
