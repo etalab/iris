@@ -10,13 +10,11 @@ yarn
 
 ## Préparation des données
 
-Cette brique s'appuie actuellement sur les données **IRIS GE** produites par l'IGN. Ces données ne sont pas ouvertes mais accessibles aux administrations.
-
-Une adaptation pour utiliser “Contours IRIS” sous Licence Ouverte est relativement triviale, et serait une bonne première contribution pour un.
+Cette brique s'appuie actuellement sur les données **IRIS GE** produites par l'IGN.
 
 ### Téléchargement des données
 
-La première étape est de télécharger les archives au format `7z` ou `7z.000` sur l'espace dédié du site de l'IGN. Ces fichiers doivent être placés dans le dossier `/data`.
+La première étape est de télécharger les archives au format `7z` ou `7z.000` sur [l'espace dédié du site de l'IGN](https://geoservices.ign.fr/documentation/diffusion/telechargement-donnees-libres.html). Ces fichiers doivent être placés dans le dossier `/data`.
 
 ### Construction de la base de données
 
