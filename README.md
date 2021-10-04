@@ -26,7 +26,7 @@ Le fichier résultat `dist/iris.json.gz` fait environ 130 Mo.
 
 ## Lancement de l'API
 
-L'API nécessite 4 Go de mémoire vive disponible.
+L'API nécessite 8 Go de mémoire vive disponible à l’initialisation.
 
 ```bash
 yarn start
