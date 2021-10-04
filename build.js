@@ -17,7 +17,7 @@ const finished = promisify(require('stream').finished)
 const wgs84 = gdal.SpatialReference.fromProj4('+init=epsg:4326')
 
 const dataDir = join(__dirname, 'data')
-const distDir = join(__dirname, 'dist')
+const rootDir = __dirname
 const tmpDir = join(__dirname, 'tmp')
 
 function gdalLayerToGeoJSONFeatures(gdalLayer, transform, mapProperties) {
@@ -74,7 +74,7 @@ function extractFeatures(inputFile) {
 
 async function main() {
   await remove(tmpDir)
-  const irisFile = createWriteStream(join(distDir, 'iris.json.gz'))
+  const irisFile = createWriteStream(join(rootDir, 'iris.json.gz'))
   const irisOutput = pumpify.obj(
     stringify(),
     createGzip(),
