@@ -1,4 +1,4 @@
-#!/usr/bin/env node --max-old-space-size=4096
+#!/usr/bin/env node --max-old-space-size=8192
 const path = require('path')
 const express = require('express')
 const {chain, min} = require('lodash')
