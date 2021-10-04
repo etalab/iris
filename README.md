@@ -22,7 +22,7 @@ La première étape est de télécharger les archives au format `7z` ou `7z.000`
 yarn build
 ```
 
-Le fichier résultat `dist/iris.json` fait environ 500 Mo (non compressé).
+Le fichier résultat `dist/iris.json.gz` fait environ 130 Mo.
 
 ## Lancement de l'API
 

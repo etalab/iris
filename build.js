@@ -2,6 +2,7 @@
 const {promisify} = require('util')
 const {join, basename} = require('path')
 const {createWriteStream} = require('fs')
+const {createGzip} = require('zlib')
 const {readdir, remove} = require('fs-extra')
 const execa = require('execa')
 const gdal = require('gdal-next')
@@ -73,9 +74,10 @@ function extractFeatures(inputFile) {
 
 async function main() {
   await remove(tmpDir)
-  const irisFile = createWriteStream(join(distDir, 'iris.json'))
+  const irisFile = createWriteStream(join(distDir, 'iris.json.gz'))
   const irisOutput = pumpify.obj(
     stringify(),
+    createGzip(),
     irisFile
   )
 

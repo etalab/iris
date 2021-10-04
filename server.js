@@ -10,7 +10,7 @@ const readJson = require('./lib/read-json')
 
 async function main() {
   const app = express()
-  const features = await readJson(path.join(__dirname, 'dist', 'iris.json'))
+  const features = await readJson(path.join(__dirname, 'dist', 'iris.json.gz'))
 
   const geoIndex = new Flatbush(features.length)
   features.forEach(f => geoIndex.add(...getBbox(f)))
