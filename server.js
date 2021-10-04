@@ -1,14 +1,16 @@
 #!/usr/bin/env node --max-old-space-size=4096
-const {features} = require('./dist/iris.json')
+const path = require('path')
 const express = require('express')
 const {chain, min} = require('lodash')
 const Flatbush = require('flatbush')
 const {bbox: getBbox, booleanPointInPolygon, point, lineString, pointToLineDistance} = require('@turf/turf')
 const morgan = require('morgan')
 const cors = require('cors')
+const readJson = require('./lib/read-json')
 
 async function main() {
   const app = express()
+  const features = await readJson(path.join(__dirname, 'dist', 'iris.json'))
 
   const geoIndex = new Flatbush(features.length)
   features.forEach(f => geoIndex.add(...getBbox(f)))

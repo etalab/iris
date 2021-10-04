@@ -6,14 +6,17 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "node --max-old-space-size=4096 server",
+    "start": "node --max-old-space-size=8192 server",
     "build": "node build"
   },
   "dependencies": {
     "@turf/turf": "^5.1.6",
+    "JSONStream": "^1.3.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "flatbush": "^3.3.0",
+    "get-stream": "^6.0.1",
+    "gunzip-maybe": "^1.4.2",
     "lodash": "^4.17.15",
     "morgan": "^1.10.0"
   },
